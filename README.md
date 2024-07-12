@@ -1,5 +1,5 @@
 # Challange project School Managment Api 
-## Every end point tested good with postman
+## Every end point tested successfully with postman
 ![My Image](postman.png)
 ## Documention for school managent api
 we have 4 main entites that have end points **User** ,**School**, **Classroom** and **Student**

@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@vercel/functions": "^1.4.0",
     "aeon-machine": "^0.0.9",
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
