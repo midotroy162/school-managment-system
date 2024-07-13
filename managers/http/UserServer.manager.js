@@ -27,7 +27,11 @@ module.exports = class UserServer {
         });
         
         /** a single middleware to handle all */
-        app.all('/api/:moduleName/:fnName',this.userApi.mw);
+        app.all('/api/:moduleName/:fnName', this.userApi.mw);
+        /** to deploy on vercel  */
+        app.use('/', (req, res) => {
+            res.send("<h1>School Managament Api</h1>");
+        });
 
         let server = http.createServer(app);
         server.listen(this.config.dotEnv.USER_PORT, () => {
