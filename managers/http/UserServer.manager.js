@@ -26,12 +26,12 @@ module.exports = class UserServer {
             res.status(500).send('Something broke!')
         });
         
-        /** a single middleware to handle all */
-        app.all('/api/:moduleName/:fnName', this.userApi.mw);
         /** to deploy on vercel  */
         app.use('/', (req, res) => {
-            res.send("<h1>School Managament Api</h1>");
+            return res.send("<h1>School Managament Api</h1>");
         });
+        /** a single middleware to handle all */
+        app.all('/api/:moduleName/:fnName', this.userApi.mw);
 
         let server = http.createServer(app);
         server.listen(this.config.dotEnv.USER_PORT, () => {
