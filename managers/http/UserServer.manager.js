@@ -27,7 +27,7 @@ module.exports = class UserServer {
         });
         
         /** to deploy on vercel  */
-        app.use('/', (req, res) => {
+        app.use((req, res) => {
             return res.send("<h1>School Managament Api</h1>");
         });
         /** a single middleware to handle all */
