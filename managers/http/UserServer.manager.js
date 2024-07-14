@@ -25,7 +25,7 @@ module.exports = class UserServer {
             console.error(err.stack)
             res.status(500).send('Something broke!')
         });
-        app.get('/', (req, res) => {
+        app.get((req, res) => {
             res.send('Hey this is my API running 🥳')
         });
         /** a single middleware to handle all */
