@@ -26,10 +26,6 @@ module.exports = class UserServer {
             res.status(500).send('Something broke!')
         });
         
-        /** to deploy on vercel  */
-        app.use((req, res) => {
-            return res.send("<h1>School Managament Api</h1>");
-        });
         /** a single middleware to handle all */
         app.all('/api/:moduleName/:fnName', this.userApi.mw);
 
