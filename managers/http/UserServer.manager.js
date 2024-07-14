@@ -26,7 +26,7 @@ module.exports = class UserServer {
             res.status(500).send('Something broke!')
         });
        
-        app.get("/", (req, res) => res.send("Express on Vercel"));
+
         /** a single middleware to handle all */
         app.all('/api/:moduleName/:fnName', this.userApi.mw);
 
